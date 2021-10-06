@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shifumi</title>
+  </head>
+  <body>
+    <h1>Shifumi - Live coding</h1>
+    <h2>Readline</h2>
+    <p>
+        <a href="https://nodejs.org/dist./v4.8.3/docs/doc/api/readline.html">https://nodejs.org - readline</a>
+      </p>
+    <p>Permet de controler et d'intéragir avec le terminal</p>
+    <p>
+      rl.question('question', call back when user is done writing){ action;
+      rl.close; => stop l'intéraction avec le terminal }
+    </p>
+    <h2>Chalk</h2>
+    <p>
+      npm install chalk console.log(chalk.magenta('bienvenue sur le jeu
+      shifumi')); => Chalk color le text en magenta On peut utiliser chalk de
+      partout.
+    </p>
+    <h3>Early return</h3>
+    <p>
+      Définir les cas qui font quitter l'appli le plus vite possible - puis
+      ensuite on met le reste. if (ily a un pbl){ j'arrete } le jeu ===> if
+      (answer !== "pierre" || answer !== "feuille" || answer !== "ciseaux"){
+      console.log(chalk.bgRed("Mauvaise saisie")); }
+    </p>
+    <h3>Get random</h3>
+    <p>
+      <a
+        href="https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array"
+        >Lien vers info</a
+      >
+    </p>
+    <h2>Notion d'asynchrone avec JS</h2>
+    <p>
+      JS est asynchrone : il ne va pas éxecuter telle chose puis telle chose...
+      rl.question va s'exécuter mais elle va attendre le résultat pour executer
+      la fonction à l'intérieur (synchrone). Pendant ce temps, JS va continuer
+      d'executer son code. ex: rl va attendre la réponse dans le terminal mais
+      le reste du code de JS sous rl.question va continuer de runner et les
+      console.log vont s'afficher. On peut pallier en utiliser AWAIT => attendre
+      que le résultat soit là avant de faire la suite. Mais il va bien falloir
+      définir ce qui est synchrone ou asynchrone.
+    </p>
+  </body>
+</html>
